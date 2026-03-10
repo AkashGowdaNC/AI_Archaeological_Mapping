@@ -1,67 +1,78 @@
-# AI_Archaeological_Mapping
-AI-driven system for automated archaeological site monitoring using satellite imagery. A U-Net segmentation model detects structural regions and generates binary masks for erosion analysis. Enables scalable, cost-effective heritage preservation through AI-based image processing and predictive monitoring.
-🛰 AI-Driven Archaeological Site Segmentation
-📌 Project Overview
+# AI-Driven Archaeological Site Mapping
 
-This project presents an AI-powered system for detecting archaeological structures from satellite imagery using deep learning. A custom U-Net model performs pixel-level image segmentation to identify structural regions and generate binary masks for analysis.
+## Problem Statement
 
-🎯 Objective
+Archaeologists often rely on manual analysis of satellite and drone imagery to identify ancient ruins and archaeological sites. This process is time-consuming and large geographical regions remain unexplored. Many potential heritage sites are also at risk due to vegetation growth, erosion, and land changes.
 
-To build a scalable and automated monitoring framework that helps in detecting and analyzing structural patterns in heritage sites using computer vision and AI.
+## Proposed Solution
 
-🧠 How It Works
+This project builds an AI-based system that analyzes satellite imagery to automatically detect important land features and assist archaeologists in identifying potential archaeological regions.
 
-Satellite images are collected and preprocessed.
+## Project Modules
 
-Masks are automatically generated using adaptive thresholding.
+1. **Dataset Collection**
 
-A U-Net segmentation model is trained on image–mask pairs.
+   * Satellite images and segmentation masks
 
-The trained model predicts structural regions from new images.
+2. **Data Preprocessing**
 
-Binary masks are generated for visualization and analysis.
+   * Dataset organization
+   * Image resizing
+   * Train/validation/test split
 
-⚙️ Tech Stack
+3. **Semantic Segmentation**
 
-Python
+   * U-Net deep learning model
+   * Pixel-level classification of satellite imagery
 
-TensorFlow / Keras
+4. **Object Detection (Planned)**
 
-OpenCV
+   * YOLO-based artifact detection
 
-NumPy
+5. **Erosion Prediction (Planned)**
 
-Matplotlib
+   * Machine learning model to identify erosion-prone areas
 
-📊 Model Details
+6. **Visualization Dashboard (Planned)**
 
-Architecture: U-Net (Encoder–Decoder CNN)
+   * Interactive map interface using Streamlit
 
-Input Size: 128x128
+## Dataset
 
-Loss Function: Binary Crossentropy
+The dataset consists of satellite images and corresponding segmentation masks.
+Each image has a mask that labels land features such as vegetation, water bodies, and structural regions.
 
-Optimizer: Adam
+## Technologies Used
 
-Output: Pixel-wise probability map
+* Python
+* OpenCV
+* PyTorch
+* NumPy
+* Streamlit
 
-🚀 Features
+## Project Structure
 
-✔ Automatic mask generation
-✔ Deep learning-based segmentation
-✔ Model training and prediction pipeline
-✔ Binary mask visualization
+```
+dataset/
+scripts/
+models/
+dashboard/
+outputs/
+```
 
-🔮 Future Improvements
+## Current Progress
 
-IoU and Dice score evaluation
+✔ Dataset preparation
+✔ Segmentation masks collected
+✔ U-Net model implementation
+✔ GitHub repository setup
 
-Time-based erosion comparison
+## Future Work
 
-Interactive dashboard integration
+* Train YOLO artifact detection model
+* Implement erosion prediction model
+* Build interactive dashboard for visualization
 
-Drone-based real-time monitoring
+## Author
 
-🌍 Impact
-
-This solution demonstrates how Artificial Intelligence can support large-scale heritage preservation by enabling automated, cost-effective satellite-based monitoring systems.
+Akash Gowda N C
